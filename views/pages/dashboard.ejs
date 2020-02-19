@@ -17,6 +17,15 @@
       </div>
     </header>
     <h2 class="friends-title">Your Beautiful Friends:</h2>
+    <% if(friends.length < 3) { %>
+    <ul class="friends-container-modified">
+      <% friends.forEach(friend => { %>
+      <a href="/user/<%=friend.id%>"
+        ><img class="friend-avatar" src="<%=friend.avatarUrl%>"
+      /></a>
+      <% }); %>
+    </ul>
+    <%} else {%>
     <ul class="friends-container">
       <% friends.forEach(friend => { %>
       <a href="/user/<%=friend.id%>"
@@ -24,6 +33,6 @@
       /></a>
       <% }); %>
     </ul>
-    <%- include( '../partials/footer') %>
+    <%}%> <%- include( '../partials/footer') %>
   </body>
 </html>

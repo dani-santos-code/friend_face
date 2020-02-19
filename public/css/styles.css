@@ -92,6 +92,18 @@ codeblock {
   flex-direction: column;
   margin: auto; }
 
+.signin-input {
+  width: 200px;
+  height: 20px;
+  margin: 10px 0; }
+
+.signin-button {
+  height: 25px;
+  border-radius: 5px;
+  background-color: #0a72ddbf;
+  color: white;
+  font-size: 14px; }
+
 body {
   background: #fafafa;
   display: flex;

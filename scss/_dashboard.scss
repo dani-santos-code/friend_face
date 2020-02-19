@@ -1,0 +1,18 @@
+.friend-avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.friends-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    grid-gap: 29px;
+    margin-top: 76px;
+}
+
+.friends-title {
+    text-align: center;
+    margin-top: 30px;
+}

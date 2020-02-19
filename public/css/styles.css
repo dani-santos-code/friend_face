@@ -85,12 +85,34 @@ codeblock {
 
 .main-header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-color: #0f7b47; }
+
+.header-image {
+  width: 200px;
+  padding: 5px 0; }
+
+.header-title {
+  color: white;
+  margin: 10px 14px 0 0; }
+
+.header-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; }
+
+.dashboard-user {
+  display: flex;
+  padding-right: 17px; }
 
 .signin-form {
   display: flex;
   flex-direction: column;
-  margin: 200px auto; }
+  margin: 200px auto;
+  padding: 20px 41px 33px;
+  background-color: #f2f6f2;
+  border: 1px solid #439b43;
+  border-radius: 2px; }
 
 .signin-input {
   width: 200px;
@@ -100,9 +122,30 @@ codeblock {
 .signin-button {
   height: 25px;
   border-radius: 5px;
-  background-color: #0a72ddbf;
+  background-color: #0f7b47;
   color: white;
-  font-size: 14px; }
+  font-size: 14px;
+  font-weight: bold; }
+
+.signin-title {
+  margin-bottom: 26px;
+  font-size: 25px; }
+
+.friend-avatar {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px; }
+
+.friends-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  grid-gap: 29px;
+  margin-top: 76px; }
+
+.friends-title {
+  text-align: center;
+  margin-top: 30px; }
 
 body {
   background: #fafafa;

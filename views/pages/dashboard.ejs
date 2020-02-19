@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <img class="header-image" src="/images/friendface_logo.png" />
+      <div class="dashboard-user">
+        <h1 class="header-title"><%=title%></h1>
+        <img class="header-avatar" src="<%=avatar%>" />
+      </div>
+    </header>
+    <h2 class="friends-title">Your Beautiful Friends:</h2>
+    <ul class="friends-container">
+      <% friends.forEach(friend => { %>
+      <img class="friend-avatar" src="<%=friend.avatarUrl%>" />
+      <% }); %>
+    </ul>
+    <%- include( '../partials/footer') %>
+  </body>
+</html>

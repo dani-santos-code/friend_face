@@ -34,11 +34,11 @@ const handleName = (req, res) => {
   // Find either returns an object or undefined, which is a falsy value
   // But filter, returns an empty array if ut doesn't find anything
   // So one would have to check for currentUser.length !== 0
-  const friends = currentUser.friends.map(friendId => {
-    return users.find(user => user.id === friendId);
-  });
 
   if (currentUser) {
+    const friends = currentUser.friends.map(friendId => {
+      return users.find(user => user.id === friendId);
+    });
     res.render("pages/dashboard", {
       title: `${currentUser.name}`,
       avatar: currentUser.avatarUrl,

@@ -51,14 +51,20 @@ const handleName = (req, res) => {
 };
 const handleUser = (req, res) => {
   const userId = req.params.id;
-  const isUserOnDB = users.find(user => user.id === userId);
-  if (isUserOnDB && currentUser) {
-    res.render("pages/userPage", {
-      title: "Test"
+  const userOnDB = users.find(user => user.id === userId);
+  console.log(userOnDB);
+  if (userOnDB && currentUser) {
+    const friends = userOnDB.friends.map(friendId => {
+      return users.find(user => user.id === friendId);
     });
-  } else if (isUserOnDB && !currentUser) {
+    res.render("pages/userPage", {
+      title: "Test",
+      userOnDB,
+      friends
+    });
+  } else if (userOnDB && !currentUser) {
     res.redirect("/signin");
-  } else if (!isUserOnDB && currentUser) {
+  } else if (!userOnDB && currentUser) {
     res.redirect("/fourOhfour");
   } else {
     res.redirect("/signin");

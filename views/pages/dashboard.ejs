@@ -19,7 +19,9 @@
     <h2 class="friends-title">Your Beautiful Friends:</h2>
     <ul class="friends-container">
       <% friends.forEach(friend => { %>
-      <img class="friend-avatar" src="<%=friend.avatarUrl%>" />
+      <a href="/user/<%=friend.id%>"
+        ><img class="friend-avatar" src="<%=friend.avatarUrl%>"
+      /></a>
       <% }); %>
     </ul>
     <%- include( '../partials/footer') %>

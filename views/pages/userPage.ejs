@@ -1,1 +1,38 @@
-<p>I'm here</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <img class="header-image" src="/images/friendface_logo.png" />
+    </header>
+    <div class="image-user-wrapper">
+      <img class="user-image" src="<%=userOnDB.avatarUrl%>" />
+    </div>
+
+    <h2 class="friends-title"><%=userOnDB.name%>'s Beautiful Friends:</h2>
+    <% if(friends.length < 3) { %>
+    <ul class="friends-container-modified">
+      <% friends.forEach(friend => { %>
+      <a href="/user/<%=friend.id%>"
+        ><img class="friend-avatar" src="<%=friend.avatarUrl%>"
+      /></a>
+      <% }); %>
+    </ul>
+    <%} else {%>
+    <ul class="friends-container">
+      <% friends.forEach(friend => { %>
+      <a href="/user/<%=friend.id%>"
+        ><img class="friend-avatar" src="<%=friend.avatarUrl%>"
+      /></a>
+      <% }); %>
+    </ul>
+    <%}%> <%- include( '../partials/footer') %>
+  </body>
+</html>

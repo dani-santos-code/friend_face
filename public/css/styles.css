@@ -83,6 +83,15 @@ codeblock {
   margin: 12px 32px 6px 0;
   padding: 12px 14px; }
 
+.main-header {
+  display: flex;
+  justify-content: space-between; }
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto; }
+
 body {
   background: #fafafa;
   display: flex;

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab:300&display=swap');
 @import 'reset';
 @import 'typography';
+@import 'header';
+@import 'signin-form';
 
 body {
     background: #fafafa;
@@ -50,7 +52,7 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-    
+
     .content {
         flex-direction: row;
         justify-content: space-between;

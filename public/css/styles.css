@@ -90,7 +90,7 @@ codeblock {
 .signin-form {
   display: flex;
   flex-direction: column;
-  margin: auto; }
+  margin: 200px auto; }
 
 .signin-input {
   width: 200px;
@@ -108,7 +108,8 @@ body {
   background: #fafafa;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif; }
 
 .main {
   flex: 1 0 auto; }

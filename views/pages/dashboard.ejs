@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+<%- include( '../partials/header') %>
     <header class="main-header">
       <img class="header-image" src="/images/friendface_logo.png" />
       <div class="dashboard-user">
         <h1 class="header-title"><%=title%></h1>
+        <% if(avatar) { %>
         <img class="header-avatar" src="<%=avatar%>" />
+        <%}%>
       </div>
     </header>
     <h2 class="friends-title">Your Beautiful Friends:</h2>
@@ -33,6 +25,14 @@
       /></a>
       <% }); %>
     </ul>
-    <%}%> <%- include( '../partials/footer') %>
+    <%}%>
+    <ul class="not-friends-yet-container">
+        <% notFriends.forEach(friend => { %>
+        <a href="/user/<%=friend.id%>"
+          ><img class="not-friend-avatar" src="<%=friend.avatarUrl%>"
+        /></a>
+        <% }); %>
+      </ul>
+    <%- include( '../partials/footer') %>
   </body>
 </html>

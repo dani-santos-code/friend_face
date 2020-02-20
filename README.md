@@ -54,13 +54,13 @@ Our security system will be total crap, but will work for our purposes. True sit
 
 Create the following endpoints
 
-| Endpoint    | Description | 
-| ----------- | ----------- |
-| `/`         | home/main page |
-| `/signin`   | signin page |
-| `/user/:id` | user page |
+| Endpoint    | Description                                                           |
+| ----------- | --------------------------------------------------------------------- |
+| `/`         | home/main page                                                        |
+| `/signin`   | signin page                                                           |
+| `/user/:id` | user page                                                             |
 | `/getname`  | this is the endpoint that will receive the data from the signinn form |
-| `*`         | Don't forget to have a 404 page setup as well. |
+| `*`         | Don't forget to have a 404 page setup as well.                        |
 
 ### About the Data
 
@@ -71,13 +71,13 @@ There is `/data/users.js` file that contains an array of `user` objects. Everyon
     id: '1009',
     name: 'Sadnan',
     friends: ['1006', '1008', '1007'],
-    avatarUrl: 'https://ca.slack-edge.com/T045DMA9Q-U614C2NSY-b7ff28d1b0b1-512' 
+    avatarUrl: 'https://ca.slack-edge.com/T045DMA9Q-U614C2NSY-b7ff28d1b0b1-512'
 },
 ```
 
 - Avatars are taken from Slack.
 - `friends` is an array of the `id`s of the people user is currently friends with.
-- In an effort, to start with _good_ data, I have created friendships for all of you. It was random, and purely based on placement in the array. I took groups of 4, or 3 for the last group, and made all of you friends. 
+- In an effort, to start with _good_ data, I have created friendships for all of you. It was random, and purely based on placement in the array. I took groups of 4, or 3 for the last group, and made all of you friends.
 
 ### Notable Methods and Code Snippets
 

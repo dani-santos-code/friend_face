@@ -34,15 +34,21 @@ const handleName = (req, res) => {
   // Find either returns an object or undefined, which is a falsy value
   // But filter, returns an empty array if ut doesn't find anything
   // So one would have to check for currentUser.length !== 0
-
   if (currentUser) {
     const friends = currentUser.friends.map(friendId => {
       return users.find(user => user.id === friendId);
     });
+
+    const notFriends = users.filter(
+      user =>
+        !currentUser.friends.includes(user.id) && currentUser.id !== user.id
+    );
+
     res.render("pages/dashboard", {
       title: `${currentUser.name}`,
       avatar: currentUser.avatarUrl,
-      friends
+      friends,
+      notFriends
     });
   } else {
     res.redirect("/signin");
@@ -52,7 +58,6 @@ const handleName = (req, res) => {
 const handleUser = (req, res) => {
   const userId = req.params.id;
   const userOnDB = users.find(user => user.id === userId);
-  console.log(userOnDB);
   if (userOnDB && currentUser) {
     const friends = userOnDB.friends.map(friendId => {
       return users.find(user => user.id === friendId);

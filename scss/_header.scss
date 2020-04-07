@@ -1,0 +1,42 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f7b47;
+
+}
+
+.header-image {
+    width: 200px;
+    padding: 5px 0;
+}
+
+.header-title {
+    color: white;
+    margin: 10px 14px 0 0;
+}
+
+.header-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.dashboard-user {
+    display: flex;
+    padding-right: 17px;
+}
+
+.user-image {
+    width: 300px;
+    border: 10px solid #0f7b47;
+    margin: 25px 0;
+    border-radius: 5px;
+
+}
+
+.image-user-wrapper {
+    background-color: #e8edeb;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

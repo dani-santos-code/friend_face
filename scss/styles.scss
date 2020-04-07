@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab:300&display=swap');
 @import 'reset';
 @import 'typography';
+@import 'header';
+@import 'footer';
+@import 'signin-form';
+@import 'dashboard';
 
 body {
     background: #fafafa;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main {
@@ -50,7 +55,7 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-    
+
     .content {
         flex-direction: row;
         justify-content: space-between;

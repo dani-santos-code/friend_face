@@ -1,0 +1,38 @@
+<%- include( '../partials/header') %>
+    <header class="main-header">
+      <img class="header-image" src="/images/friendface_logo.png" />
+      <div class="dashboard-user">
+        <h1 class="header-title"><%=title%></h1>
+        <% if(avatar) { %>
+        <img class="header-avatar" src="<%=avatar%>" />
+        <%}%>
+      </div>
+    </header>
+    <h2 class="friends-title">Your Beautiful Friends:</h2>
+    <% if(friends.length < 3) { %>
+    <ul class="friends-container-modified">
+      <% friends.forEach(friend => { %>
+      <a href="/user/<%=friend.id%>"
+        ><img class="friend-avatar" src="<%=friend.avatarUrl%>"
+      /></a>
+      <% }); %>
+    </ul>
+    <%} else {%>
+    <ul class="friends-container">
+      <% friends.forEach(friend => { %>
+      <a href="/user/<%=friend.id%>"
+        ><img class="friend-avatar" src="<%=friend.avatarUrl%>"
+      /></a>
+      <% }); %>
+    </ul>
+    <%}%>
+    <ul class="not-friends-yet-container">
+        <% notFriends.forEach(friend => { %>
+        <a href="/user/<%=friend.id%>"
+          ><img class="not-friend-avatar" src="<%=friend.avatarUrl%>"
+        /></a>
+        <% }); %>
+      </ul>
+    <%- include( '../partials/footer') %>
+  </body>
+</html>
